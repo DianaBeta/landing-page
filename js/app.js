@@ -39,14 +39,18 @@ sections.forEach(build_navbar);
 function build_navbar(section) {
     // get the title of the section (h2 heading)
     const title = section.dataset.nav;
-    console.log(title);
     // create a list element
     const li = document.createElement("li");
     // write title of section in navbar element
-    console.log(section)
-    li.appendChild(document.createTextNode(title));
-    // Add an event listener to navbar element 
-    li.addEventListener('click', navigate_to_section(title));
+    const rel_link = document.createElement("A");
+    rel_link.setAttribute('href', '#'+ section.id);
+    const text_link = document.createTextNode(title);
+    rel_link.appendChild(text_link);
+    console.log(section.id);
+   
+
+    li.appendChild(rel_link);
+
     // append li to ul
     navbar.appendChild(li);
 
