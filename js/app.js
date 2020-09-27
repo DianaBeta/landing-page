@@ -41,7 +41,7 @@ function build_navbar(section) {
     const title = section.dataset.nav;
     // create a list element
     const li = document.createElement("li");
-    // write title of section in navbar element
+    // write title of section in navbar element and link it the each section
     const rel_link = document.createElement("A");
     rel_link.setAttribute('href', '#'+ section.id);
     const text_link = document.createTextNode(title);
@@ -66,12 +66,7 @@ function build_navbar(section) {
  * Begin Events
  * 
 */
-function navigate_to_section(title) {
-  return function(title){
-    console.log(title);
-  }
 
-}
 
 // Build menu 
 
