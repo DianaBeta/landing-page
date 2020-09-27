@@ -17,7 +17,7 @@
  * Define Global Variables
  * 
 */
-const sections = document.querySelectorAll('.landing__container');
+const sections = document.querySelectorAll('section');
 const navbar = document.querySelector('#navbar__list');
 
 /**
@@ -34,16 +34,22 @@ const navbar = document.querySelector('#navbar__list');
 
 // build the navbar
 
-sections.forEach(showSection);
+sections.forEach(build_navbar);
 
-function showSection(section) {
-    const title = section.getElementsByTagName("h2")[0].innerHTML;
+function build_navbar(section) {
+    // get the title of the section (h2 heading)
+    const title = section.dataset.nav;
+    console.log(title);
+    // create a list element
     const li = document.createElement("li");
-    li.addEventListener('click', function () {
-      console.log('The heading was clicked!');
-    });
+    // write title of section in navbar element
+    console.log(section)
     li.appendChild(document.createTextNode(title));
+    // Add an event listener to navbar element 
+    li.addEventListener('click', navigate_to_section(title));
+    // append li to ul
     navbar.appendChild(li);
+
 }
 // Add class 'active' to section when near top of viewport
 
@@ -56,9 +62,12 @@ function showSection(section) {
  * Begin Events
  * 
 */
-document.getElementById("section1").addEventListener('click', function () {
-    console.log('The heading was clicked!');
-  });
+function navigate_to_section(title) {
+  return function(title){
+    console.log(title);
+  }
+
+}
 
 // Build menu 
 
