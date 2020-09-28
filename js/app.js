@@ -21,6 +21,7 @@ const navbar = document.querySelector('#navbar__list');
 const sections = document.querySelectorAll('section');
 const section = document.querySelectorAll('.landing__container');
 const navbarlinks = document.querySelectorAll('navbar-links');
+console.log(navbar);
 
 /**
  * End Global Variables
@@ -46,7 +47,7 @@ function build_navbar_entry(section) {
     const anchor =  document.createElement("A");
     const linkName = anchor.setAttribute('href','#' + section.id );
     //anchor.setAttribute('class',id);
-    anchor.classList.add("navbar-links"+ "-" + section.id);
+    anchor.classList.add("navbar-link"+ "-" + section.id);
     anchor.appendChild(document.createTextNode(title));
     listItem.appendChild(anchor);
     navbar.appendChild(listItem);
@@ -59,10 +60,9 @@ function makeActive(){
      //getBoundingClientRect() function, returns the position of the current section in the viewport.   
     const box= section.getBoundingClientRect();
     if(box.top <=110 && box.bottom >= 110){
-    section.classList.add("your-active-class");   
-        } else {
-    section.classList.remove("your-active-class");
-    
+        section.classList.add("your-active-class");
+    } else {
+        section.classList.remove("your-active-class");
         }
     }
 }
