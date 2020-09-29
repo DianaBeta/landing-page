@@ -52,6 +52,7 @@ function build_navbar_entry(section) {
     listItem.appendChild(anchor);
     navbar.appendChild(listItem);
     
+    
 }
 
 //highlights the active section by adding the class called "your-active-class"
@@ -61,8 +62,11 @@ function makeActive(){
     const box= section.getBoundingClientRect();
     if(box.top <=110 && box.bottom >= 110){
         section.classList.add("your-active-class");
+        document.querySelector(`.navbar-link-${section.id}`).classList.add("active");
     } else {
+        //document.querySelector('A').classList.add("active");
         section.classList.remove("your-active-class");
+        document.querySelector(`.navbar-link-${section.id}`).classList.remove("active");
         }
     }
 }
