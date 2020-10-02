@@ -17,11 +17,14 @@
  * Define Global Variables
  * 
 */
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('the DOM is ready to be interacted with!');
+    
+});
 const navbar = document.querySelector('#navbar__list');
 const sections = document.querySelectorAll('section');
 const section = document.querySelectorAll('.landing__container');
-const navbarlinks = document.querySelectorAll('navbar-links');
-console.log(navbar);
+//const navbarlinks = document.querySelectorAll('navbar-links');
 
 /**
  * End Global Variables
@@ -35,20 +38,20 @@ console.log(navbar);
  * 
 */
 document.body.onload = build_navbar()
-// build the navbar
+// build the navbar when the page loads
 
 function build_navbar(){
-    sections.forEach(build_navbar_entry);
+    //loops over the sections to create the navbar with the title from every section
+    sections.forEach(build_navbar_entry)
 };
-//builds navbar by creating <li> elements for the empty navbar ul and adds the link according to sections. 
+//builds navbar by creating <li> elements for the empty navbar ul(unordered list) and adds the link according to sections. 
 function build_navbar_entry(section) {
     const title= section.dataset.nav;
-    const listItem = document.createElement("li");
-    const anchor =  document.createElement("A");
-    const linkName = anchor.setAttribute('href','#' + section.id );
-    //anchor.setAttribute('class',id);
-    anchor.classList.add("navbar-link"+ "-" + section.id);
-    anchor.appendChild(document.createTextNode(title));
+    const listItem = document.createElement("li");//creates a list element
+    const anchor =  document.createElement("A"); // creates an anchor element to be populated with a link
+    const linkName = anchor.setAttribute('href','#' + section.id ); // sets the link according to the section so that we can scroll to section on link click
+    anchor.classList.add("navbar-link"+ "-" + section.id); // creates a class for each link
+    anchor.appendChild(document.createTextNode(title)); 
     listItem.appendChild(anchor);
     navbar.appendChild(listItem);
     
@@ -77,11 +80,26 @@ function makeActive(){
  * Begin Events
  *
 */
+//get the button
+var button=document.querySelector(".btn");
+//when the user scrolls down from the top of the document, then show the button
+/*document.addEventListener("scroll", function() {
+    showBtn()
+  }); */
+  function goToTop(){
+      button.addEventListener('click',() => {
+      document.documentElement.scrollTop=0;
+  }); } showBtn()
 
+function showBtn(){
+  //  button.addEventListener('scroll',() => {
+    if(document.body.scrollTop>20 || document.documentElement.scrollTop>20){
+        button.style.display = "block";
+    } else {
+        button.display= "none";
+    }
+}
 
-// Build menu 
-
-// Scroll to section on link click
 
 // Set sections as active
 // Make sections active
