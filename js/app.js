@@ -19,10 +19,12 @@
 */
 document.addEventListener('DOMContentLoaded', function () {
     console.log('the DOM is ready to be interacted with!');
+    goToTop();
     
-});
+}); 
 const navbar = document.querySelector('#navbar__list');
 const sections = document.querySelectorAll('section');
+console.log(sections);
 const section = document.querySelectorAll('.landing__container');
 //const navbarlinks = document.querySelectorAll('navbar-links');
 
@@ -48,12 +50,12 @@ function build_navbar(){
 function build_navbar_entry(section) {
     const title= section.dataset.nav;
     const listItem = document.createElement("li");//creates a list element
-    const anchor =  document.createElement("A"); // creates an anchor element to be populated with a link
+    const anchor =  document.createElement("a"); // creates an anchor element to be populated with a link
     const linkName = anchor.setAttribute('href','#' + section.id ); // sets the link according to the section so that we can scroll to section on link click
-    anchor.classList.add("navbar-link"+ "-" + section.id); // creates a class for each link
-    anchor.appendChild(document.createTextNode(title)); 
-    listItem.appendChild(anchor);
-    navbar.appendChild(listItem);
+    anchor.classList.add("navbar-link"+ "-" + section.id); // creates a class for each link (to be used in makeActive function to highlight the active item)
+    anchor.appendChild(document.createTextNode(title)); //append a text node with the title to the anchor
+    listItem.appendChild(anchor); //append anchor to the list item
+    navbar.appendChild(listItem); //append list item to navbar
     
     
 }
@@ -83,27 +85,28 @@ function makeActive(){
 //get the button
 var button=document.querySelector(".btn");
 //when the user scrolls down from the top of the document, then show the button
-/*document.addEventListener("scroll", function() {
-    showBtn()
-  }); */
+    
   function goToTop(){
       button.addEventListener('click',() => {
       document.documentElement.scrollTop=0;
-  }); } showBtn()
+      document.body.scrollTop=0;
+  }); }  
 
-function showBtn(){
-  //  button.addEventListener('scroll',() => {
-    if(document.body.scrollTop>20 || document.documentElement.scrollTop>20){
-        button.style.display = "block";
+  function showBtn(){
+       
+    if(document.body.scrollTop>100 || document.documentElement.scrollTop>100){
+        button.classList.remove('hide');
     } else {
-        button.display= "none";
+        button.classList.add('hide');
+          }
     }
-}
+
 
 
 // Set sections as active
-// Make sections active
+// Listen to scroll to make sections active and show button
 document.addEventListener("scroll", function() {
     makeActive();
+    showBtn();
   });
 
