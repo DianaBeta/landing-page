@@ -18,13 +18,11 @@
  * 
 */
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('the DOM is ready to be interacted with!');
     goToTop();
     
 }); 
 const navbar = document.querySelector('#navbar__list');
 const sections = document.querySelectorAll('section');
-console.log(sections);
 const section = document.querySelectorAll('.landing__container');
 //const navbarlinks = document.querySelectorAll('navbar-links');
 
@@ -49,6 +47,8 @@ function build_navbar(){
 //builds navbar by creating <li> elements for the empty navbar ul(unordered list) and adds the link according to sections. 
 function build_navbar_entry(section) {
     const title= section.dataset.nav;
+    //const title= document.querySelectorAll("h2")[0];
+    console.log(title);
     const listItem = document.createElement("li");//creates a list element
     const anchor =  document.createElement("a"); // creates an anchor element to be populated with a link
     const linkName = anchor.setAttribute('href','#' + section.id ); // sets the link according to the section so that we can scroll to section on link click
