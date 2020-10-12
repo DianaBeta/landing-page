@@ -48,7 +48,6 @@ function build_navbar(){
 function build_navbar_entry(section) {
     const title= section.dataset.nav;
     //const title= document.querySelectorAll("h2")[0];
-    console.log(title);
     const listItem = document.createElement("li");//creates a list element
     const anchor =  document.createElement("a"); // creates an anchor element to be populated with a link
     const linkName = anchor.setAttribute('href','#' + section.id ); // sets the link according to the section so that we can scroll to section on link click
