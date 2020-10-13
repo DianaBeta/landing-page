@@ -8,7 +8,7 @@
 ## Author
 Project made by Diana Betancourt for [Udacity's](#http://udacity.com)
 
-*[Front End Web Developer Nanodegree](#https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011).
+[Front End Web Developer Nanodegree](#https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011).
 Code written by Diana Betancourt based on starter code given for the project by Udacity.
 
 ## Description
