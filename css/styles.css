@@ -75,6 +75,7 @@ main {
     display: block;
     background-image: url("../img/hero-banner.jpg");
     background-size: cover;
+
     transition: opacity 1s ease;
     
 
