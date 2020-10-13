@@ -2,12 +2,17 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+* [Author](#Author)
+* [Description](#Description)
 
-## Instructions
+## Author
+Project made by Diana Betancourt for Udacity's Front End Web Developer Nanodegree.
+Code written by Diana Betancourt based on starter code given for the project by Udacity.
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Description
 
-To get started, open `js/app.js` and start building out the app's functionality
+In this project I made a navigation bar using JavaScript.
+The navigation bar is dynamically made by taking the information from the HTML file.
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+It also indicates where is the user on the page, and highlights the active section as well as the active navigation button.
+
