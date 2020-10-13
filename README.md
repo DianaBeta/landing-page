@@ -16,3 +16,7 @@ The navigation bar is dynamically made by taking the information from the HTML f
 
 It also indicates where is the user on the page, and highlights the active section as well as the active navigation button.
 
+Following this link will take you to the project:
+
+https://dianabeta.github.io/landing-page/
+
