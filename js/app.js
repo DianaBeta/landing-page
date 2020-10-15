@@ -33,9 +33,9 @@ function myFunction() {
     
 }
 
-function scrollSection(){
-    const section = document.querySelectorAll('section');
-    section.id.scrollIntoView({ block: 'start', behavior: 'smooth' });
+function scrollSection(section){
+    section.scrollIntoView();
+    console.log(section)
 }
 
 
@@ -65,12 +65,14 @@ function build_navbar_entry(section) {
     //const anchor =  document.createElement("a"); // creates an anchor element to be populated with a link
     //const linkName = anchor.setAttribute('href','#'+ section.id); // sets the link according to the section so that we can scroll to section on link click
     const linkDiv = document.createElement("div");
-    const linkFunction = linkDiv.setAttribute('onclick',"scrollSection()");
+    const linkFunction = linkDiv.addEventListener('click', () =>{
+        scrollSection(section)
+    });
     linkDiv.classList.add("navbar-link"+ "-" + section.id); // creates a class for each link (to be used in makeActive function to highlight the active item)
     linkDiv.appendChild(document.createTextNode(title)); //append a text node with the title to the anchor
     listItem.appendChild(linkDiv); //append anchor to the list item
     navbar.appendChild(listItem); //append list item to navbar
-    console.log(section.id);
+    // console.log(section.id);
     
  
 }
