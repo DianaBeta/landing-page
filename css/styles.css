@@ -71,13 +71,10 @@ main {
 
 .main__hero{
     height: 600px;
-    width: 170vh;
-    display: block;
+    width: 200vh;
+    display: grid;
     background-image: url("../img/hero-banner.jpg");
     background-size: cover;
-
-    transition: opacity 1s ease;
-    
 
 }
 
@@ -105,8 +102,7 @@ section {
     justify-content: center;
     align-items: center;
     vertical-align: top;
-    
-    
+     
 }
 
 
@@ -131,6 +127,7 @@ section {
 {
     background-color: black;
     opacity: 0.7; 
+    
 }
 .navbar__menu li {
     display: inline-block;
