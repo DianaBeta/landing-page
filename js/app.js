@@ -27,12 +27,6 @@ const navbar = document.querySelector('#navbar__list');
 const sections = document.querySelectorAll('section');
 const section = document.querySelectorAll('.landing__container');
 
-function myFunction() {
-    var elmnt = document.getElementById("section2");
-    elmnt.scrollIntoView();
-    
-}
-
 function scrollSection(section){
     section.scrollIntoView();
     console.log(section)
