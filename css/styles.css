@@ -42,6 +42,11 @@ h1 {
 .btn.hide{
     display: none;
 }
+
+.icon{
+    z-index: 999;
+}
+
 @media only screen and (min-width: 35em){
     h1 {
         font-size: 3em;
@@ -70,8 +75,8 @@ main {
 }
 
 .main__hero{
-    height: 600px;
-    width: 200vh;
+    height: 100vh;
+    width: auto;
     display: grid;
     background-image: url("../img/hero-banner.jpg");
     background-size: cover;
@@ -126,9 +131,10 @@ section {
 .navbar__menu
 {
     background-color: black;
-    opacity: 0.7; 
     
+   
 }
+
 .navbar__menu li {
     display: inline-block;
     padding: 10px;
@@ -295,5 +301,25 @@ section.your-active-class .landing__container::after {
 		transform: rotate(360deg)
 		           translate(-1em) 
 		           rotate(-360deg);
-	}
+    }
+    
+}
+
+@media only screen and (max-width: 600px){
+
+    .navbar__menu {
+        display: flex;
+        flex-direction: column;
+        
+    
+    }
+    
+    .main__hero{
+        height: 90vh;
+        width: auto;
+        display: grid;
+        background-image: url("../img/hero-banner.jpg");
+        background-size: cover;
+    
+    }
 }

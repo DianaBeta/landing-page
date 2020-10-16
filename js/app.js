@@ -29,7 +29,6 @@ const section = document.querySelectorAll('.landing__container');
 
 function scrollSection(section){
     section.scrollIntoView();
-    console.log(section)
 }
 
 
@@ -58,7 +57,7 @@ function build_navbar_entry(section) {
     const listItem = document.createElement("li");//creates a list element
     //const anchor =  document.createElement("a"); // creates an anchor element to be populated with a link
     //const linkName = anchor.setAttribute('href','#'+ section.id); // sets the link according to the section so that we can scroll to section on link click
-    const linkDiv = document.createElement("div");
+    const linkDiv = document.createElement("div"); // creates a div that will serve as a link
     const linkFunction = linkDiv.addEventListener('click', () =>{
         scrollSection(section)
     });
