@@ -43,19 +43,9 @@ h1 {
     display: none;
 }
 
-.icon{
-    z-index: 999;
-}
-
-@media only screen and (min-width: 35em){
-    h1 {
-        font-size: 3em;
-        margin: 2em 4rem 1em;
-        text-align: left;
-        color:black;
-    }
-    
-}
+.fa fa-bars {
+    display: none;
+  }
 
 h2 {
     border-bottom: 1px solid #cc1;
@@ -305,6 +295,7 @@ section.your-active-class .landing__container::after {
     
 }
 
+
 @media only screen and (max-width: 600px){
 
     .navbar__menu {
@@ -320,6 +311,14 @@ section.your-active-class .landing__container::after {
         display: grid;
         background-image: url("../img/hero-banner.jpg");
         background-size: cover;
-    
+
     }
-}
+  }
+@media only screen and (min-width: 35em){
+    h1 {
+        font-size: 3em;
+        margin: 2em 4rem 1em;
+        text-align: left;
+        color:black;
+    }
+} 
