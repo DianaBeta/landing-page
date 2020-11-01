@@ -21,7 +21,6 @@
 //call goToTop method when the document is loaded, go to top goes to the start of the document when the button "Top"  is clicked
 document.addEventListener('DOMContentLoaded',() => {
     goToTop();
-    addSection()
     
 }); 
 const navbar = document.querySelector('#navbar__list');
@@ -67,7 +66,7 @@ function build_navbar_entry(section) {
     linkDiv.appendChild(document.createTextNode(title)); //append a text node with the title to the anchor
     listItem.appendChild(linkDiv); //append anchor to the list item
     navbar.appendChild(listItem); //append list item to navbar
-    // console.log(section.id);
+    
     
 
 }
