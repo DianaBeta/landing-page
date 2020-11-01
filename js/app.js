@@ -21,11 +21,13 @@
 //call goToTop method when the document is loaded, go to top goes to the start of the document when the button "Top"  is clicked
 document.addEventListener('DOMContentLoaded',() => {
     goToTop();
+    addSection()
     
 }); 
 const navbar = document.querySelector('#navbar__list');
 const sections = document.querySelectorAll('section');
 const section = document.querySelectorAll('.landing__container');
+const add = document.querySelectorAll('.add');
 
 function scrollSection(section){
     section.scrollIntoView();
@@ -67,7 +69,7 @@ function build_navbar_entry(section) {
     navbar.appendChild(listItem); //append list item to navbar
     // console.log(section.id);
     
- 
+
 }
 
 //highlights the active section by adding the class called "your-active-class" for sections and the class "active" in the navbar

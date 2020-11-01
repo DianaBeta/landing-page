@@ -13,8 +13,8 @@
 body {
     background: white;
     margin: 0;
-    font-family: 'Merriweather', serif;
     color:black;
+    font-family:'Roboto', sans-serif;
 }
 
 
@@ -42,10 +42,6 @@ h1 {
 .btn.hide{
     display: none;
 }
-
-.fa fa-bars {
-    display: none;
-  }
 
 h2 {
     border-bottom: 1px solid #cc1;
